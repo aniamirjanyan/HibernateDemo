@@ -11,6 +11,8 @@ Add the following dependencies and click GENERATE
 
 You should also [download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install postgreSQL.
 
+**Some mentions about the code**
+
 Firstly, here is everything we need to have in *application.properties* file.
 
 Postgres properties:
@@ -44,5 +46,7 @@ public ResponseEntity<List<Book>> findByTitleAndAuthor(@RequestParam String titl
     return new ResponseEntity<>(books, HttpStatus.OK);
 }
 ```
+
+
 
 
