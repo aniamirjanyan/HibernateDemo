@@ -1,5 +1,5 @@
 # HibernateDemo
-Implementing Hibernate with Spring Boot and PostgreSQL
+### *Implementing Hibernate with Spring Boot and PostgreSQL*
 
 **Installations and set up**
 
@@ -10,7 +10,7 @@ Add the following dependencies and click GENERATE
 - PostgreSQL Driver
 - Spring Data JPA
 
-You should alos [download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install postgreSQL.
+You should also [download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and install postgreSQL.
 
 Firstly, here is everything we need to have in *application.properties* file.
 ```
