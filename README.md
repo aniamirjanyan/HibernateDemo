@@ -29,4 +29,20 @@ And by doing this Spring Boot will allow bean overriding without any change to b
 spring.main.allow-bean-definition-overriding=true
 ```
 
+Aside from the simple GET and POST methods here is an example of a query using two parameters. You can read about various query methods [here](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods).
+
+Declare the method in *BookRepository.java* class like this:
+```
+List<Book> findByTitleAndAuthor(String title, String author);
+```
+And continue in *Controller.java* class like this:
+```
+@GetMapping("/findbytitleandauthor/")
+public ResponseEntity<List<Book>> findByTitleAndAuthor(@RequestParam String title, 
+                                                       @RequestParam String author) {
+    List<Book> books = bookRepository.findByTitleAndAuthor(title, author);
+    return new ResponseEntity<>(books, HttpStatus.OK);
+}
+```
+
 
